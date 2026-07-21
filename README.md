@@ -43,9 +43,17 @@ motto: "Code first, sleep later."
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Embergenov-Nurmurat&theme=tokyonight&hide_border=true&background=0d1117&stroke=00FFF7&ring=ff00ff&fire=00ff9f" width="48%" />
 </p>
 
+<!-- Agar yuqoridagi stats rasmi ishlamasa, shu qatorni ishlating (mirror):
+<img src="https://github-readme-stats-sigma-black.vercel.app/api?username=Embergenov-Nurmurat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&icon_color=ff00ff&text_color=c9d1d9" width="48%" />
+-->
+
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Embergenov-Nurmurat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&text_color=c9d1d9" width="55%" />
 </p>
+
+<!-- Agar top-langs ishlamasa, shu qatorni ishlating (mirror):
+<img src="https://github-readme-stats-sigma-black.vercel.app/api/top-langs/?username=Embergenov-Nurmurat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&text_color=c9d1d9" width="55%" />
+-->
 
 ---
 
