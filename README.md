@@ -39,12 +39,12 @@ motto: "Code first, sleep later."
 ### `> github_stats --fetch`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&icon_color=ff00ff&text_color=c9d1d9" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_GITHUB_USERNAME&theme=tokyonight&hide_border=true&background=0d1117&stroke=00FFF7&ring=ff00ff&fire=00ff9f" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Embergenov-Nurmurat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&icon_color=ff00ff&text_color=c9d1d9" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Embergenov-Nurmurat&theme=tokyonight&hide_border=true&background=0d1117&stroke=00FFF7&ring=ff00ff&fire=00ff9f" width="48%" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&text_color=c9d1d9" width="55%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Embergenov-Nurmurat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00FFF7&text_color=c9d1d9" width="55%" />
 </p>
 
 ---
@@ -52,7 +52,7 @@ motto: "Code first, sleep later."
 ### `> activity_graph --render`
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_GITHUB_USERNAME&theme=react-dark&hide_border=true&bg_color=0d1117&color=00FFF7&line=ff00ff&point=00ff9f" width="95%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Embergenov-Nurmurat&theme=react-dark&hide_border=true&bg_color=0d1117&color=00FFF7&line=ff00ff&point=00ff9f" width="95%" />
 </p>
 
 ---
@@ -60,7 +60,7 @@ motto: "Code first, sleep later."
 ### `> connect --establish`
 
 <p align="center">
-  <a href="https://github.com/YOUR_GITHUB_USERNAME">
+  <a href="https://github.com/Embergenov-Nurmurat">
     <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=00FFF7" />
   </a>
 </p>
