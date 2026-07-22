@@ -54,16 +54,18 @@ location: "Uzbekistan"
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Embergenov-Nurmurat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0221&title_color=ff00ff&icon_color=00fff9&text_color=c3c3ff&ring_color=ff00ff" width="48%"/>
+<img src="https://github-stats-extended.vercel.app/api?username=Embergenov-Nurmurat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d0221&title_color=ff00ff&icon_color=00fff9&text_color=c3c3ff&ring_color=ff00ff&cache_seconds=1800" width="48%"/>
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Embergenov-Nurmurat&theme=tokyonight&hide_border=true&background=0d0221&ring=ff00ff&fire=00fff9&currStreakLabel=00fff9" width="48%"/>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Embergenov-Nurmurat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d0221&title_color=ff00ff&text_color=c3c3ff" width="48%"/>
+<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=Embergenov-Nurmurat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d0221&title_color=ff00ff&text_color=c3c3ff&cache_seconds=1800" width="48%"/>
 
 </div>
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Embergenov-Nurmurat&theme=tokyo-night&bg_color=0d0221&color=00fff9&line=ff00ff&point=ffffff&hide_border=true" width="100%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Embergenov-Nurmurat&theme=tokyo-night&bg_color=0d0221&color=00fff9&line=ff00ff&point=ffffff&hide_border=true&cache_seconds=1800" width="100%"/>
 </div>
+
+<sub align="center">If any widget above still shows broken after a hard refresh, it means that free hosting service is temporarily rate-limited — just wait a few minutes and refresh your profile page.</sub>
 
 ---
 
