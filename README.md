@@ -1,1 +1,27 @@
-<h1 align="center">Hi, I'm Nurmurat &#128075;</h1> <pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.*<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:@.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*#:*@@@@@@@@@@*:*#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.*#*#@@@@@@@@@@#*##.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@:&nbsp;&nbsp;&nbsp;&nbsp;#@@@@@@@&nbsp;&nbsp;&nbsp;&nbsp;.@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embergenov-Nurmurat&nbsp;-------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#@@:&nbsp;&nbsp;&nbsp;&nbsp;@@@@@@@@.&nbsp;&nbsp;&nbsp;:@@@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embergenov&nbsp;Nurmurat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@@@@@#@@@@@@@@@@@@#@@@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alias:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Embergenov-Nurmurat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@@@@@@@@@@@@@@@@@@@@@@@@@@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Born:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2011<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::::::::::::::::::::::::::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location:&nbsp;&nbsp;Uzbekistan<br>&nbsp;&nbsp;&nbsp;&nbsp;.#@#&nbsp;&nbsp;*@@@@@@@@@@@@@@@@@@@@@@@@*&nbsp;&nbsp;#@#:<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Languages&nbsp;-----------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Know:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Python,&nbsp;HTML,&nbsp;CSS<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learning:&nbsp;&nbsp;Kotlin,&nbsp;Android<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IDE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IntelliJ&nbsp;IDEA<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#<br>&nbsp;&nbsp;&nbsp;&nbsp;*@@@:.@@@@@@@@@@@@@@@@@@@@@@@@@@..@@@#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;-------------------------------<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.:.&nbsp;.@@@@@@@@@@@@@@@@@@@@@@@@@@.&nbsp;.::&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GitHub:&nbsp;&nbsp;&nbsp;&nbsp;Embergenov-Nurmurat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*#@@@@@@@@@@@@@@@@@@@@@@@*<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@@@@*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@@@@#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@@@@*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*@@@@#<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*##*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*##*.<br></pre> <p align="center"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" /> <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" /> </p>
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg">
+  <img src="./dark.svg" alt="Embergenov Nurmurat — Python Developer learning Kotlin and Android, based in Uzbekistan">
+</picture>
+
+</div>
+
+## Hi, I'm Nurmurat 👋
+
+I'm a Python developer from Uzbekistan, currently learning Kotlin and Android development.
+
+## About / Focus
+
+- Building with **Python**, **HTML** and **CSS**
+- Learning **Kotlin** and **Android development**
+- Working in **IntelliJ IDEA**
+
+## Engineering Stack
+
+`Python` · `HTML` · `CSS` · `Kotlin` *(learning)* · `Android` *(learning)*
+
+## Connect
+
+- GitHub: [@Embergenov-Nurmurat](https://github.com/Embergenov-Nurmurat)
