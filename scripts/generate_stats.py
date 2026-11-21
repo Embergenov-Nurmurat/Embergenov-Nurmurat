@@ -23,6 +23,7 @@ query($login: String!) {
                  privacy: PUBLIC) {
       totalCount
       nodes {
+        name
         stargazerCount
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
@@ -77,6 +78,13 @@ def fetch(login, token):
             item = langs.setdefault(n["name"], [0, n["color"]])
             item[0] += e["size"]
     cc = u["contributionsCollection"]
+    print(f"user: {login}")
+    for repo in u["repositories"]["nodes"]:
+        print(f"  repo {repo['name']}: {repo['stargazerCount']} stars")
+    print(f"followers={u['followers']['totalCount']} repos={u['repositories']['totalCount']} "
+          f"stars={stars} commits(1y)={cc['totalCommitContributions']} "
+          f"prs={cc['totalPullRequestContributions']} issues={cc['totalIssueContributions']} "
+          f"contributions={cc['contributionCalendar']['totalContributions']}")
     return dict(
         since=u["createdAt"][:4],
         followers=u["followers"]["totalCount"],
