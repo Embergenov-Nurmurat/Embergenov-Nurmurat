@@ -2,7 +2,7 @@ name: Update profile stats
 
 on:
   schedule:
-    - cron: "0 3 * * *"        # every day at 03:00 UTC
+    - cron: "0 * * * *"         # every hour
   workflow_dispatch:            # manual run from the Actions tab
   push:
     branches: [main]
