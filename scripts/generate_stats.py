@@ -109,7 +109,10 @@ def demo_data():
 
 
 def render(d, t, user):
-    W, H = 1180, 366
+    W = 560
+    n_lang = max(len(d["langs"]), 1)
+    lang_top = 394
+    H = lang_top + (n_lang - 1) * 48 + 92
     out = []
     a = out.append
     a(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" '
@@ -125,60 +128,57 @@ def render(d, t, user):
       f'<stop offset="1" stop-color="{t["bg3"]}"/></linearGradient>'
       f'<linearGradient id="bd" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{W}" y2="{H}">'
       f'<stop offset="0" stop-color="{t["b1"]}"/><stop offset=".5" stop-color="{t["b2"]}"/>'
-      f'<stop offset="1" stop-color="{t["b3"]}"/></linearGradient>'
-      f'<clipPath id="r"><rect x="24" y="24" width="{W-48}" height="{H-48}" rx="22"/></clipPath></defs>')
-    a(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="30" fill="url(#bg)"/>')
-    a(f'<rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="30" fill="none" '
-      f'stroke="url(#bd)" stroke-opacity=".55" stroke-width="1.5"/>')
+      f'<stop offset="1" stop-color="{t["b3"]}"/></linearGradient></defs>')
+    a(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="28" fill="url(#bg)"/>')
+    a(f'<rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="28" fill="none" '
+      f'stroke="url(#bd)" stroke-opacity=".6" stroke-width="1.5"/>')
     # window chrome
-    for cx, col in ((46, "#EF4444"), (66, "#F59E0B"), (86, "#10B981")):
-        a(f'<circle cx="{cx}" cy="42" r="6" fill="{col}"/>')
-    a(f'<text x="108" y="46" font-size="13" fill="{t["muted"]}">'
-      f'{escape(user.lower())}@profile:~$ ./stats.sh<tspan class="cur" fill="{t["title"]}"> ▌</tspan></text>')
-    a(f'<text x="{W-46}" y="46" font-size="12" text-anchor="end" fill="{t["muted"]}">'
-      f'updated {datetime.now(timezone.utc):%Y-%m-%d}</text>')
-    a(f'<line x1="46" y1="62" x2="{W-46}" y2="62" stroke="{t["muted"]}" stroke-opacity=".25"/>')
+    for cx, col in ((36, "#EF4444"), (58, "#F59E0B"), (80, "#10B981")):
+        a(f'<circle cx="{cx}" cy="40" r="7" fill="{col}"/>')
+    a(f'<text x="102" y="45" font-size="14" fill="{t["muted"]}">'
+      f'{escape(user.lower())}@profile:~$<tspan class="cur" fill="{t["title"]}"> ▌</tspan></text>')
+    a(f'<line x1="32" y1="62" x2="{W-32}" y2="62" stroke="{t["muted"]}" stroke-opacity=".25"/>')
 
-    # left panel: metrics
-    a(f'<text x="310" y="92" font-size="13" font-weight="700" letter-spacing="4" '
+    # metrics: 3 columns x 2 rows
+    a(f'<text x="{W/2}" y="98" font-size="15" font-weight="700" letter-spacing="5" '
       f'text-anchor="middle" fill="{t["title"]}">STATS.LOG</text>')
     metrics = [
-        ("REPOS", d["repos"]), ("STARS", d["stars"]),
-        ("FOLLOWERS", d["followers"]), ("COMMITS / 1Y", d["commits"]),
-        ("PULL REQUESTS", d["prs"]), ("ISSUES", d["issues"]),
+        ("REPOS", d["repos"]), ("STARS", d["stars"]), ("FOLLOWERS", d["followers"]),
+        ("COMMITS/1Y", d["commits"]), ("PULL REQ.", d["prs"]), ("ISSUES", d["issues"]),
     ]
+    cw, gap, x0 = 156, 12, 32
     for i, (label, val) in enumerate(metrics):
-        col, row = i % 2, i // 2
-        x = 60 + col * 250
-        y = 120 + row * 62
+        col, row = i % 3, i // 3
+        x = x0 + col * (cw + gap)
+        y = 120 + row * 92
         a(f'<g class="fade" style="animation-delay:{.1 + i * .08:.2f}s">'
-          f'<rect x="{x}" y="{y}" width="230" height="52" rx="12" fill="{t["panel"]}" '
+          f'<rect x="{x}" y="{y}" width="{cw}" height="80" rx="14" fill="{t["panel"]}" '
           f'fill-opacity="{t["panel_op"]}" stroke="{t["track"]}"/>'
-          f'<text x="{x+16}" y="{y+21}" font-size="10.5" letter-spacing="2" fill="{t["muted"]}">{label}</text>'
-          f'<text x="{x+16}" y="{y+42}" font-size="20" font-weight="700" fill="{t["text"]}">{val:,}</text>'
+          f'<text x="{x+16}" y="{y+28}" font-size="12" letter-spacing="1.5" fill="{t["muted"]}">{label}</text>'
+          f'<text x="{x+16}" y="{y+62}" font-size="30" font-weight="700" fill="{t["text"]}">{val:,}</text>'
           f'</g>')
-    a(f'<text x="60" y="{H-34}" font-size="12" fill="{t["muted"]}">'
-      f'{d["total"]:,} contributions in the last year · on GitHub since {d["since"]}</text>')
+    a(f'<text x="{W/2}" y="326" font-size="13" text-anchor="middle" fill="{t["muted"]}">'
+      f'{d["total"]:,} contributions in the last year</text>')
+    a(f'<line x1="32" y1="344" x2="{W-32}" y2="344" stroke="{t["muted"]}" stroke-opacity=".25"/>')
 
-    # divider
-    a(f'<line x1="600" y1="84" x2="600" y2="{H-48}" stroke="{t["muted"]}" stroke-opacity=".25"/>')
-
-    # right panel: languages
-    a(f'<text x="890" y="92" font-size="13" font-weight="700" letter-spacing="4" '
+    # languages
+    a(f'<text x="{W/2}" y="374" font-size="15" font-weight="700" letter-spacing="5" '
       f'text-anchor="middle" fill="{t["title"]}">TOP.LANGUAGES</text>')
     total = sum(v[0] for _, v in d["langs"]) or 1
-    bx, bw = 640, 460
+    bx, bw = 32, W - 64
     for i, (name, (size, color)) in enumerate(d["langs"]):
         pct = size / total * 100
-        y = 126 + i * 38
+        y = lang_top + 12 + i * 48
         color = color or FALLBACK_COLORS[i % len(FALLBACK_COLORS)]
         a(f'<g class="fade" style="animation-delay:{.2 + i * .1:.2f}s">'
-          f'<circle cx="{bx+4}" cy="{y-4}" r="4" fill="{color}"/>'
-          f'<text x="{bx+18}" y="{y}" font-size="13" fill="{t["text"]}">{escape(name)}</text>'
-          f'<text x="{bx+bw}" y="{y}" font-size="13" text-anchor="end" fill="{t["muted"]}">{pct:.1f}%</text>'
-          f'<rect x="{bx}" y="{y+8}" width="{bw}" height="6" rx="3" fill="{t["track"]}" fill-opacity=".6"/>'
-          f'<rect class="bar" style="animation-delay:{.4 + i * .1:.2f}s" x="{bx}" y="{y+8}" '
-          f'width="{max(pct / 100 * bw, 4):.1f}" height="6" rx="3" fill="{color}"/></g>')
+          f'<circle cx="{bx+6}" cy="{y-5}" r="6" fill="{color}"/>'
+          f'<text x="{bx+22}" y="{y}" font-size="17" fill="{t["text"]}">{escape(name)}</text>'
+          f'<text x="{bx+bw}" y="{y}" font-size="17" text-anchor="end" fill="{t["muted"]}">{pct:.1f}%</text>'
+          f'<rect x="{bx}" y="{y+12}" width="{bw}" height="8" rx="4" fill="{t["track"]}" fill-opacity=".6"/>'
+          f'<rect class="bar" style="animation-delay:{.4 + i * .1:.2f}s" x="{bx}" y="{y+12}" '
+          f'width="{max(pct / 100 * bw, 6):.1f}" height="8" rx="4" fill="{color}"/></g>')
+    a(f'<text x="{W/2}" y="{H-22}" font-size="12" text-anchor="middle" fill="{t["muted"]}">'
+      f'updated {datetime.now(timezone.utc):%Y-%m-%d} · since {d["since"]}</text>')
     a('</svg>')
     return "\n".join(out)
 
