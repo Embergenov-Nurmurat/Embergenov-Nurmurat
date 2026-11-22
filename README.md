@@ -29,7 +29,7 @@ I'm a Python developer from Uzbekistan, currently learning Kotlin and Android de
 
 ## About / Focus
 
-- Building with **Python**, **HTML** and **CSS**
+- Building with **Python**, **JavaScript**, **HTML** and **CSS**
 - Learning **Kotlin** and **Android development**
 - Working in **IntelliJ IDEA**
 
@@ -37,8 +37,8 @@ I'm a Python developer from Uzbekistan, currently learning Kotlin and Android de
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,html,css,kotlin,androidstudio,idea,git,github&theme=dark">
-    <img src="https://skillicons.dev/icons?i=python,html,css,kotlin,androidstudio,idea,git,github&theme=light" alt="Python, HTML, CSS, Kotlin, Android Studio, IntelliJ IDEA, Git, GitHub">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,js,html,css,kotlin,androidstudio,idea,git,github&theme=dark">
+    <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,androidstudio,idea,git,github&theme=light" alt="Python, JavaScript, HTML, CSS, Kotlin, Android Studio, IntelliJ IDEA, Git, GitHub">
   </picture>
 </p>
 
