@@ -13,6 +13,14 @@
 <a href="https://github.com/Embergenov-Nurmurat?tab=repositories"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FEmbergenov-Nurmurat&query=%24.public_repos&label=Repos&style=flat-square&logo=github&color=0E7490" alt="Public repos"></a>
 <img src="https://img.shields.io/badge/Based%20in-Uzbekistan-10B981?style=flat-square" alt="Uzbekistan">
 
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./festive-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./festive-light.svg">
+  <img src="./festive-dark.svg" alt="">
+</picture>
+
 </div>
 
 ## Hi, I'm Nurmurat 👋

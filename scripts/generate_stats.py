@@ -12,6 +12,8 @@ import os
 import urllib.request
 from datetime import datetime, timezone
 from html import escape
+from datetime import date as _date
+import festive
 
 QUERY = """
 query($login: String!) {
@@ -108,7 +110,7 @@ def demo_data():
     )
 
 
-def render(d, t, user):
+def render(d, t, user, theme_name="light", festive_on=False):
     W = 560
     n_lang = max(len(d["langs"]), 1)
     lang_top = 394
@@ -132,6 +134,10 @@ def render(d, t, user):
     a(f'<rect x="1" y="1" width="{W-2}" height="{H-2}" rx="28" fill="url(#bg)"/>')
     a(f'<rect x="1.5" y="1.5" width="{W-3}" height="{H-3}" rx="28" fill="none" '
       f'stroke="url(#bd)" stroke-opacity=".6" stroke-width="1.5"/>')
+    if festive_on:
+        a(f'<style>{festive.css(H)}</style>')
+        a(festive.snow(W, H, n=30, seed=5, **festive.snow_style(theme_name)))
+        a(festive.garland(W, y0=5, sag=8, segs=5, margin=44, wire=t["muted"], bulb_r=3.6, hang=5))
     # window chrome
     for cx, col in ((36, "#EF4444"), (58, "#F59E0B"), (80, "#10B981")):
         a(f'<circle cx="{cx}" cy="40" r="7" fill="{col}"/>')
@@ -188,14 +194,27 @@ def main():
     p.add_argument("--user", default=os.environ.get("GITHUB_ACTOR", "Embergenov-Nurmurat"))
     p.add_argument("--out", default=".")
     p.add_argument("--demo", action="store_true")
+    p.add_argument("--festive", choices=["auto", "on", "off"], default="auto",
+                   help="New Year decorations (auto = Nov 15 - Jan 15)")
+    p.add_argument("--today", help="override date, YYYY-MM-DD (for testing)")
     args = p.parse_args()
+    today = _date.fromisoformat(args.today) if args.today else datetime.now(timezone.utc).date()
+    fest = {"on": True, "off": False}.get(args.festive, festive.is_festive(today))
     data = demo_data() if args.demo else fetch(args.user, os.environ["GITHUB_TOKEN"])
     os.makedirs(args.out, exist_ok=True)
     for name, theme in THEMES.items():
-        path = os.path.join(args.out, f"stats-{name}.svg")
-        with open(path, "w", encoding="utf-8") as f:
-            f.write(render(data, theme, args.user))
-        print("wrote", path)
+        def write(fname, text):
+            path = os.path.join(args.out, fname)
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(text)
+            print("wrote", path)
+        write(f"stats-{name}.svg", render(data, theme, args.user, name, fest))
+        write(f"festive-{name}.svg",
+              festive.strip_svg(theme, name, today) if fest else festive.empty_svg())
+        banner = os.path.join(args.out, f"{name}.svg")
+        if os.path.exists(banner):
+            festive.apply_to_banner(banner, name, theme, fest)
+            print("banner", banner, "festive" if fest else "plain")
 
 
 if __name__ == "__main__":
