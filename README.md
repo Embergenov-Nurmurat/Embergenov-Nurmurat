@@ -16,9 +16,9 @@
 <br>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./festive-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./festive-light.svg">
-  <img src="./festive-dark.svg" alt="">
+  <source media="(prefers-color-scheme: dark)" srcset="https://newyear.1embergenovnurmurat1.workers.dev/?theme=dark">
+  <source media="(prefers-color-scheme: light)" srcset="https://newyear.1embergenovnurmurat1.workers.dev/?theme=light">
+  <img src="https://newyear.1embergenovnurmurat1.workers.dev/?theme=dark" alt="New Year countdown">
 </picture>
 
 </div>
