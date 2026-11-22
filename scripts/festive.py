@@ -6,7 +6,7 @@ afterwards, so nothing has to be cleaned up by hand.
 import math
 import random
 import re
-from datetime import date
+from datetime import date, datetime
 
 BULBS = ["#EF4444", "#F59E0B", "#10B981", "#22D3EE", "#A78BFA", "#F472B6"]
 CONFETTI = ["#EF4444", "#F59E0B", "#10B981", "#22D3EE", "#A78BFA", "#F472B6", "#FACC15"]
@@ -95,21 +95,29 @@ def snow_style(theme_name):
     return dict(fill="#FFFFFF", stroke=None, opacity=.8)
 
 
-def strip_svg(t, theme_name, today: date):
-    """Countdown card (light/dark) in the same terminal style."""
+def strip_svg(t, theme_name, now: datetime):
+    """Countdown card (light/dark) in the same terminal style. `now` must be tz-aware."""
     W, H = 560, 232
-    ny = today.year + (0 if today.month == 1 else 1)
-    new_year = today.month == 1
-    days_left = (date(ny, 1, 1) - today).days
-    start = date(today.year, 1, 1)
-    total_days = (date(today.year + 1, 1, 1) - start).days
-    pct = 100 if new_year else round(((today - start).days + 1) / total_days * 100)
+    tz = now.tzinfo
+    new_year = now.month == 1
+    ny = now.year if new_year else now.year + 1
+    start = datetime(now.year, 1, 1, tzinfo=tz)
+    end_of_year = datetime(now.year + 1, 1, 1, tzinfo=tz)
+    pct = 100 if new_year else int((now - start) / (end_of_year - start) * 100)
+    left = datetime(ny, 1, 1, tzinfo=tz) - now
+    days, hours = left.days, left.seconds // 3600
     if new_year:
-        big, unit = str(ny), ""
-        sub, label = "HAPPY NEW YEAR!", f"{ny}.status: online"
+        big, sub, label = str(ny), "HAPPY NEW YEAR!", f"{ny}.status: online"
     else:
-        big, unit = str(days_left), " day" if days_left == 1 else " days"
-        sub, label = f"until {ny}", f"{today.year}.loading... {pct}%"
+        label = f"{now.year}.loading... {pct}%"
+        sub = f"until {ny}"
+        unit = lambda n, one, many: one if n == 1 else many
+        if days > 0:
+            big = (f'{days}<tspan font-size="22" fill="{t["muted"]}"> {unit(days, "day", "days")}  </tspan>'
+                   f'{hours:02d}<tspan font-size="22" fill="{t["muted"]}"> {unit(hours, "hr", "hrs")}</tspan>')
+        else:
+            big = f'{hours}<tspan font-size="22" fill="{t["muted"]}"> {unit(hours, "hour", "hours")}</tspan>'
+    unit = ""
     bar_w = W - 64
     o = []
     a = o.append
@@ -136,7 +144,7 @@ def strip_svg(t, theme_name, today: date):
     a(f'<text x="32" y="68" font-size="14" fill="{t["muted"]}">'
       f'$ ./countdown --to {ny}<tspan class="cur" fill="{t["title"]}"> ▌</tspan></text>')
     a(f'<text x="{W/2}" y="130" font-size="54" font-weight="700" text-anchor="middle" fill="{t["text"]}">'
-      f'{big}<tspan font-size="22" fill="{t["muted"]}">{unit}</tspan></text>')
+      f'{big}</text>')
     a(f'<text x="{W/2}" y="160" font-size="16" letter-spacing="5" text-anchor="middle" '
       f'fill="{t["title"]}">{sub}</text>')
     a(f'<rect x="32" y="182" width="{bar_w}" height="8" rx="4" fill="{t["track"]}" fill-opacity=".6"/>')

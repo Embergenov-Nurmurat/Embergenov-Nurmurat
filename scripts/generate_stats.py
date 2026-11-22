@@ -10,7 +10,7 @@ import argparse
 import json
 import os
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from html import escape
 from datetime import date as _date
 import festive
@@ -196,10 +196,13 @@ def main():
     p.add_argument("--demo", action="store_true")
     p.add_argument("--festive", choices=["auto", "on", "off"], default="auto",
                    help="New Year decorations (auto = Nov 15 - Jan 15)")
-    p.add_argument("--today", help="override date, YYYY-MM-DD (for testing)")
+    p.add_argument("--today", help="override date/time, e.g. 2026-12-20T14:30 (for testing)")
+    p.add_argument("--tz", type=float, default=5,
+                   help="UTC offset (hours) used for the New Year countdown, default 5 = Tashkent")
     args = p.parse_args()
-    today = _date.fromisoformat(args.today) if args.today else datetime.now(timezone.utc).date()
-    fest = {"on": True, "off": False}.get(args.festive, festive.is_festive(today))
+    tz = timezone(timedelta(hours=args.tz))
+    now = datetime.fromisoformat(args.today).replace(tzinfo=tz) if args.today else datetime.now(tz)
+    fest = {"on": True, "off": False}.get(args.festive, festive.is_festive(now.date()))
     data = demo_data() if args.demo else fetch(args.user, os.environ["GITHUB_TOKEN"])
     os.makedirs(args.out, exist_ok=True)
     for name, theme in THEMES.items():
@@ -210,7 +213,7 @@ def main():
             print("wrote", path)
         write(f"stats-{name}.svg", render(data, theme, args.user, name, fest))
         write(f"festive-{name}.svg",
-              festive.strip_svg(theme, name, today) if fest else festive.empty_svg())
+              festive.strip_svg(theme, name, now) if fest else festive.empty_svg())
         banner = os.path.join(args.out, f"{name}.svg")
         if os.path.exists(banner):
             festive.apply_to_banner(banner, name, theme, fest)
