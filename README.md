@@ -37,7 +37,7 @@ I'm a Python developer from Uzbekistan, currently learning Kotlin and Android de
 
 <p>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,js,html,css,kotlin,androidstudio,idea,git,github&theme=dark">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python%2Cjs%2Chtml%2Ccss%2Ckotlin%2Candroidstudio%2Cidea%2Cgit%2Cgithub&amp;theme=dark">
     <img src="https://skillicons.dev/icons?i=python,js,html,css,kotlin,androidstudio,idea,git,github&theme=light" alt="Python, JavaScript, HTML, CSS, Kotlin, Android Studio, IntelliJ IDEA, Git, GitHub">
   </picture>
 </p>
